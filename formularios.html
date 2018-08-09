@@ -73,7 +73,7 @@
 	<form action="registrardatos.php" method="post">
 		Ingresa tu Nombre:
 		<input type="text" name="nombre"><br>
-		Selecciona tu País:
+		Selecciona tu País: <br>
 		<select name="pais">
 			<option value="1">Argentina</option>
 			<option value="2">Chile</option>
@@ -82,7 +82,26 @@
 			<option value="5">Holanda</option>
 			<option value="6">Otro</option>
 		</select>
-		<br>
+		<br><br>
+		<input type="submit" value="enviar">
+		<input type="reset" value="borrar">
+	</form>
+
+	<h2>Formulario con Semi-ComboBox</h2>
+
+	<form action="registrardatos.php" method="post">
+		Ingresa tu Nombre:
+		<input type="text" name="nombre"><br>
+		Selecciona tu País: <br><br>
+		<select name="pais" size="6">
+			<option value="1">Argentina</option>
+			<option value="2">Chile</option>
+			<option value="3">China</option>
+			<option value="4">Venezuela</option>
+			<option value="5">Holanda</option>
+			<option value="6">Otro</option>
+		</select>
+		<br><br>
 		<input type="submit" value="enviar">
 		<input type="reset" value="borrar">
 	</form>
