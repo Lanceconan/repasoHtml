@@ -25,7 +25,8 @@
 		<li><a href="tablas.html">Tablas</a></li>
 		<li><a href="tablaencabezado.html">Tablas con Encabezado</a></li>
 		<li><a href="tablatitulo.html">Tablas con Título</a></li>
-		<li><a href="tablaceldacombinada.html">Tabla con Celdas Combinadas</a></li>		
+		<li><a href="tablaceldacombinada.html">Tabla con Celdas Combinadas</a></li>	
+		<li><a href="formularios.html">Prueba de Formularios</a></li>		
 	</ol>
 
 	<h3>Ver por Ancla</h3>
@@ -46,6 +47,7 @@
 		<li><a href="#tablaceldacombinada">Tablas con Celdas Combinadas</a></li>
 		<li><a href="#tablaceldacombinada">Tablas con Celdas Combinadas</a></li>
 		<li><a href="#registrodatos">Registro de datos</a></li>
+		<li><a href="#formularios">Formularios</a></li>
 	</ul>
 	
 	<h1>AQUI COMIENZA LA PÁGINA ETERNA DE PRUEBAS</h1>
@@ -317,7 +319,7 @@
 	<a href="#header">Volver al Principio de la Pagina ...</a>
 	<a name="registrodatos"></a>
 
-	<h2>Formulario de Prueba</h2>
+	<h2>Formulario de Login</h2>
 
 	<form action="registrardatos.php" method="post">
 		Ingresa tu Nombre:
@@ -326,6 +328,21 @@
 		<input type="password" name="clave" size="20"> <br>
 		<input type="submit" value="enviar">		
 		<input type="reset" value="borrar">
+	</form>
+
+	<h2>Formulario de Contacto</h2>
+
+	<form action="registrardatos.php" method="post">
+		Ingrese su nombre:
+		<input type="text" name="nombre" size="30"><br>
+		Ingrese su mail:
+		<input type="text" name="mail" size="50"><br>
+		Comentarios:<br>
+		<textarea name="comentarios" rows="5" cols="60"></textarea> 
+		<br>
+		<input type="submit" value="Enviar">
+		<input type="reset" value="borrar">
+
 	</form>
 </body>
 
