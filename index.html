@@ -459,13 +459,49 @@
 
 		<h2>Carga de archivos</h2>
 
-		<form action="registrardatos.php" method="post">
+		<form action="registrardatos.php" method="post" enctype="multipart/form-data">
 			<input type="text" name="nombre" size="30"><br>
 			Seleccione la foto:
 			<input type="file" name="foto">
 			<br><br>
 			<button type="submit">Enviar<img src="images/save.png" alt="envio"></button>
 			<button type="reset">Borrar<img src="images/delete.png" alt="borrado"></button>
+		</form>
+
+		<h2>Campos ocultos en caso de requerirse</h2>
+
+		<form action="registrardatos.php" method="post">
+			<input type="hidden" value="10:20" name="hora">
+			Ingrese su nombre:
+			<input type="text" name="nombre" size="30">
+			<br>
+			<input type="submit" value="Enviar">
+		</form>
+
+		<h2>Subdivisión de Campos en los formularios</h2>
+
+		<form action="registrardatos.php" method="post">
+			<fieldset>
+				<legend>Datos personales</legend>
+				Apellido y nombre:
+				<input type="text" name="nombre" size="30"><br>
+				Documento de identidad:
+				<input type="text" name="dni" size="8"><br>
+				Fecha de nacimiento:
+				<input type="text" name="fechanacimiento" size="12"><br>
+				Dirección:
+				<input type="text" name="direccionpersona" size="30"><br>
+			</fieldset>
+			<fieldset>
+				<legend>Datos Laborales</legend>
+				Nombre de la empresa:
+				<input type="text" name="nombreempresa" size="30"><br>
+				Actividad:
+				<input type="text" name="actividad" size="50"><br>
+				Dirección:
+				<input type="text" name="direccionempresa" size="30"><br>
+			</fieldset>
+			
 		</form>
 
 </body>
