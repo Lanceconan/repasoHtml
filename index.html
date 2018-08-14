@@ -584,6 +584,62 @@
 				<button type="reset" tabindex="11">Borrar <img src="images/delete.png" alt="borrar"></button>
 
 			</fieldset>
+		</form>
+
+		<h2>Componentes del formulario con componentes deshabilitados</h2>
+
+	<form action="registrardatos.php" method="post">
+		<fieldset>
+			<legend>Datos Personales (Textos)</legend>
+			Nombre:
+			<input type="text" name="nombre" value="Ingresa tu nombre aquí ..."><br>
+			Rut:
+			<input type="text" name="rut" value="Ingresa tu rut aquí"><br>
+			Correo:
+			<input type="text" name="correo" value="Ingresa tu correo aquí....">
+			Comentarios:<br>
+			<textarea name="comentarios" rows="5" cols="40" disabled>Ingrese aqui sus comentarios ... </textarea><br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Selección de Color Favorito (Radio)</legend>
+			<input type="radio" name="colores" value="1" disabled> Rojo <br>
+			<input type="radio" name="colores" value="2"> Verde <br>
+			<input type="radio" name="colores" value="3"> Azul <br>
+			<input type="radio" name="colores" value="4"> Amarillo <br>
+			<input type="radio" name="colores" value="5"> Morado <br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Selección de Lenguajes de Programación (CheckBox)</legend>
+			<input type="checkbox" name="java" disabled> JAVA <br>
+			<input type="checkbox" name="java"> C# <br>
+			<input type="checkbox" name="java"> C/C++ <br>
+			<input type="checkbox" name="java"> PYTHON <br>
+			<input type="checkbox" name="java"> JAVASCRIPT <br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Selección de Postre Favorito (ComboBox)</legend>
+			<select name="postres">
+				<optgroup label="Preparados">
+					<option value="1">Tiramisú</option>
+					<option value="2">Tres Leches</option>
+					<option value="3">Yogurt</option>
+				</optgroup>
+				<optgroup label="Naturales">
+					<option value="4" disabled>Manzana</option>
+					<option value="5">Naranja</option>
+					<option value="6">Pera</option>
+					<option value="7">Sandía</option>
+				</optgroup>
+			</select>
+		</fieldset>
+
+		<br><br>
+		<button type="submit" disabled>Enviar <img src="images/save.png" alt="guardar" ></button>
+		<button type="reset">Borrar <img src="images/delete.png" alt="borrar"></button>
+	</form>
 
 </body>
 

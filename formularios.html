@@ -215,83 +215,138 @@
 
 	<h2>Componentes del formulario con valores por defecto</h2>
 
-		<form action="registrardatos.php" method="post">
-			<fieldset>
-				<legend>Datos Personales (Textos)</legend>
-				Nombre:
-				<input type="text" name="nombre" value="Ingresa tu nombre aquí ..."><br>
-				Rut:
-				<input type="text" name="rut" value="Ingresa tu rut aquí"><br>
-				Correo:
-				<input type="text" name="correo" value="Ingresa tu correo aquí....">
-				Comentarios:<br>
-				<textarea name="comentarios" rows="5" cols="40">Ingrese aqui sus comentarios ... </textarea><br>
-			</fieldset>
+	<form action="registrardatos.php" method="post">
+		<fieldset>
+			<legend>Datos Personales (Textos)</legend>
+			Nombre:
+			<input type="text" name="nombre" value="Ingresa tu nombre aquí ..."><br>
+			Rut:
+			<input type="text" name="rut" value="Ingresa tu rut aquí"><br>
+			Correo:
+			<input type="text" name="correo" value="Ingresa tu correo aquí....">
+			Comentarios:<br>
+			<textarea name="comentarios" rows="5" cols="40">Ingrese aqui sus comentarios ... </textarea><br>
+		</fieldset>
 
-			<fieldset>
-				<legend>Selección de Color Favorito (Radio)</legend>
-				<input type="radio" name="colores" value="1" checked> Rojo <br>
-				<input type="radio" name="colores" value="2"> Verde <br>
-				<input type="radio" name="colores" value="3"> Azul <br>
-				<input type="radio" name="colores" value="4"> Amarillo <br>
-				<input type="radio" name="colores" value="5"> Morado <br>
-			</fieldset>
+		<fieldset>
+			<legend>Selección de Color Favorito (Radio)</legend>
+			<input type="radio" name="colores" value="1" checked> Rojo <br>
+			<input type="radio" name="colores" value="2"> Verde <br>
+			<input type="radio" name="colores" value="3"> Azul <br>
+			<input type="radio" name="colores" value="4"> Amarillo <br>
+			<input type="radio" name="colores" value="5"> Morado <br>
+		</fieldset>
 
-			<fieldset>
-				<legend>Selección de Lenguajes de Programación (CheckBox)</legend>
-				<input type="checkbox" name="java" checked> JAVA <br>
-				<input type="checkbox" name="java"> C# <br>
-				<input type="checkbox" name="java"> C/C++ <br>
-				<input type="checkbox" name="java"> PYTHON <br>
-				<input type="checkbox" name="java"> JAVASCRIPT <br>
-			</fieldset>
+		<fieldset>
+			<legend>Selección de Lenguajes de Programación (CheckBox)</legend>
+			<input type="checkbox" name="java" checked> JAVA <br>
+			<input type="checkbox" name="java"> C# <br>
+			<input type="checkbox" name="java"> C/C++ <br>
+			<input type="checkbox" name="java"> PYTHON <br>
+			<input type="checkbox" name="java"> JAVASCRIPT <br>
+		</fieldset>
 
-			<fieldset>
-				<legend>Selección de Postre Favorito (ComboBox)</legend>
-				<select name="postres">
-					<optgroup label="Preparados">
-						<option value="1">Tiramisú</option>
-						<option value="2">Tres Leches</option>
-						<option value="3">Yogurt</option>
-					</optgroup>
-					<optgroup label="Naturales">
-						<option value="4" selected>Manzana</option>
-						<option value="5">Naranja</option>
-						<option value="6">Pera</option>
-						<option value="7">Sandía</option>
-					</optgroup>
-				</select>
-			</fieldset>
+		<fieldset>
+			<legend>Selección de Postre Favorito (ComboBox)</legend>
+			<select name="postres">
+				<optgroup label="Preparados">
+					<option value="1">Tiramisú</option>
+					<option value="2">Tres Leches</option>
+					<option value="3">Yogurt</option>
+				</optgroup>
+				<optgroup label="Naturales">
+					<option value="4" selected>Manzana</option>
+					<option value="5">Naranja</option>
+					<option value="6">Pera</option>
+					<option value="7">Sandía</option>
+				</optgroup>
+			</select>
+		</fieldset>
+
+		<br><br>
+		<button type="submit">Enviar <img src="images/save.png" alt="guardar"></button>
+		<button type="reset">Borrar <img src="images/delete.png" alt="borrar"></button>
+	</form>
+
+	<h2>Control de foco en elementos del formulario</h2>
+
+	<form action="registrardatos.php" method="post">
+		<fieldset>
+			<legend>Control de Foco en elementos del formulario</legend>
+
+			<input type="text" name="text1" size="5" tabindex="1">
+			<input type="text" name="text2" size="5" tabindex="4">
+			<input type="text" name="text3" size="5" tabindex="7">
+			<br>
+			<input type="text" name="text4" size="5" tabindex="2">
+			<input type="text" name="text5" size="5" tabindex="5">
+			<input type="text" name="text6" size="5" tabindex="8">
+			<br>
+			<input type="text" name="text7" size="5" tabindex="3">
+			<input type="text" name="text8" size="5" tabindex="6">
+			<input type="text" name="text9" size="5" tabindex="9">
 
 			<br><br>
-			<button type="submit">Enviar <img src="images/save.png" alt="guardar"></button>
-			<button type="reset">Borrar <img src="images/delete.png" alt="borrar"></button>
-		</form>
+			<button type="submit" tabindex="10">Enviar <img src="images/save.png" alt="guardar"></button>
+			<button type="reset" tabindex="11">Borrar <img src="images/delete.png" alt="borrar"></button>
 
-		<h2>Control de foco en elementos del formulario</h2>
+		</fieldset>
+	</form>
 
-		<form action="registrardatos.php" method="post">
-			<fieldset>
-				<legend>Control de Foco en elementos del formulario</legend>
+	<h2>Componentes del formulario con componentes deshabilitados</h2>
 
-				<input type="text" name="text1" size="5" tabindex="1">
-				<input type="text" name="text2" size="5" tabindex="4">
-				<input type="text" name="text3" size="5" tabindex="7">
-				<br>
-				<input type="text" name="text4" size="5" tabindex="2">
-				<input type="text" name="text5" size="5" tabindex="5">
-				<input type="text" name="text6" size="5" tabindex="8">
-				<br>
-				<input type="text" name="text7" size="5" tabindex="3">
-				<input type="text" name="text8" size="5" tabindex="6">
-				<input type="text" name="text9" size="5" tabindex="9">
+	<form action="registrardatos.php" method="post">
+		<fieldset>
+			<legend>Datos Personales (Textos)</legend>
+			Nombre:
+			<input type="text" name="nombre" value="Ingresa tu nombre aquí ..."><br>
+			Rut:
+			<input type="text" name="rut" value="Ingresa tu rut aquí"><br>
+			Correo:
+			<input type="text" name="correo" value="Ingresa tu correo aquí....">
+			Comentarios:<br>
+			<textarea name="comentarios" rows="5" cols="40" disabled>Ingrese aqui sus comentarios ... </textarea><br>
+		</fieldset>
 
-				<br><br>
-				<button type="submit" tabindex="10">Enviar <img src="images/save.png" alt="guardar"></button>
-				<button type="reset" tabindex="11">Borrar <img src="images/delete.png" alt="borrar"></button>
+		<fieldset>
+			<legend>Selección de Color Favorito (Radio)</legend>
+			<input type="radio" name="colores" value="1" disabled> Rojo <br>
+			<input type="radio" name="colores" value="2"> Verde <br>
+			<input type="radio" name="colores" value="3"> Azul <br>
+			<input type="radio" name="colores" value="4"> Amarillo <br>
+			<input type="radio" name="colores" value="5"> Morado <br>
+		</fieldset>
 
-			</fieldset>
-		</form>
+		<fieldset>
+			<legend>Selección de Lenguajes de Programación (CheckBox)</legend>
+			<input type="checkbox" name="java" disabled> JAVA <br>
+			<input type="checkbox" name="java"> C# <br>
+			<input type="checkbox" name="java"> C/C++ <br>
+			<input type="checkbox" name="java"> PYTHON <br>
+			<input type="checkbox" name="java"> JAVASCRIPT <br>
+		</fieldset>
+
+		<fieldset>
+			<legend>Selección de Postre Favorito (ComboBox)</legend>
+			<select name="postres">
+				<optgroup label="Preparados">
+					<option value="1">Tiramisú</option>
+					<option value="2">Tres Leches</option>
+					<option value="3">Yogurt</option>
+				</optgroup>
+				<optgroup label="Naturales">
+					<option value="4" disabled>Manzana</option>
+					<option value="5">Naranja</option>
+					<option value="6">Pera</option>
+					<option value="7">Sandía</option>
+				</optgroup>
+			</select>
+		</fieldset>
+
+		<br><br>
+		<button type="submit" disabled>Enviar <img src="images/save.png" alt="guardar" ></button>
+		<button type="reset">Borrar <img src="images/delete.png" alt="borrar"></button>
+	</form>
 
 </body>
 
