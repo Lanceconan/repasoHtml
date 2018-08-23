@@ -1,0 +1,5 @@
+Esto es una carga de un archivo al HTML mediante el uso de AJAX
+
+Asicrono Javascript Y XML --> AJAX
+
+Cambio de datos

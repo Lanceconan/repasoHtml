@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script>
+        
+        var peticionHTTP;
+        function getPeticionHTTP(){
+            if(window.XMLHttpRequest)
+                peticionHTTP = new XMLHttpRequest();
+            else
+                peticionHTTP = ActiveXObject("Microsoft.XMLHTTP");
+        }
+
+        function doPeticion(url, metodo, funcion){
+            peticionHTTP.onreadystatechange = funcion;
+
+            peticionHTTP.open(metodo, url, true);
+            peticionHTTP.send(null);
+        }
+        
+        function downloadFile(){
+            getPeticionHTTP();
+            doPeticion('archivo.txt', 'GET', doAction);
+        }
+        
+        function doAction(){
+            if(peticionHTTP.readyState == 4){
+                if(peticionHTTP.status == 200){
+                    document.write(peticionHTTP.responseText);
+                }
+            }
+        }
+
+        window.onload = downloadFile;
+        
+
+        
+    </script>
+    <title>AJAX Hola Mundo</title>
+</head>
+<body>
+    
+</body>
+</html>
